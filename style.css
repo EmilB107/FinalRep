@@ -1,0 +1,641 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+html{
+  font-family: Poppins, 'Segoe UI', sans-serif;
+  scroll-behavior: smooth;
+}
+
+nav {
+    background-color: #f1530d;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    margin: 0 3rem;
+    color: white;
+    position: relative;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    align-items: center;
+/*    daaa*/
+    transition: max-height 0.3s ease-in-out;
+}
+
+.nav-links li {
+    margin: 0 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #f4a261;
+}
+
+.hamburger {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 1;
+}
+
+.register-button {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border: none;
+    border-radius: 4px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.register-button:hover {
+    background-color: white;
+    color: black;
+    transition: background-color 0.8s ease, color 0.8s ease;
+    cursor: pointer;
+}
+
+/* hero section */
+.cont-hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    text-align: center;
+}
+
+.cont-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-image: url('img/hero_section.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+.hero-text {
+    color: white;
+    font-size: 1.4rem;
+}
+
+.hero-text h1 {
+    font-weight: 800;
+    font-size: 4.7rem;
+}
+
+.hero-tagline {
+    padding-bottom: 18px;
+    font-weight: 500;
+}
+
+/* about event */
+.cont-about {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    gap: 80px;
+    padding: 80px;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.about-deets {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    max-width: 500px;
+    line-height: 1.6;
+}
+
+.about-deets h2 {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+
+.cont-about img {
+    max-width: 100%;
+    width: 400px;
+}
+
+/* Judges Section */
+.cont-judge {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f8f8f8;
+}
+
+.cont-judge h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.judges {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.judge {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 300px;
+    padding: 30px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s;
+}
+
+.judge:hover {
+    transform: scale(1.05);
+}
+
+
+.judge img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.judge h3 {
+    font-size: 1.2rem;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+.judge p {
+    color: #555;
+    margin: 8px 0;
+}
+
+.judge-position {
+    font-weight: 700;
+}
+
+/* venue Section */
+.cont-venue {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 20px;
+}
+
+.cont-venue h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.venue {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    gap: 80px;
+}
+
+.venue-deets {
+    flex: 1;
+    line-height: 1.8;
+    color: #555;
+}
+
+.location {
+    padding-bottom: 16px;
+}
+
+.location span {
+    font-weight: 700;
+}
+
+.images-carousel {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+    max-width: 600px;
+    overflow: hidden;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    min-width: 100%; /* Ensures only one item shows at a time */
+}
+
+.carousel-item p {
+    padding-top: 12px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.images-carousel button {
+    background: #333;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
+
+/* schedule section */
+.cont-schedule {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 20px;
+    background-color: #f8f8f8;
+    text-align: center;
+}
+
+.cont-schedule h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.cont-schedule p {
+    font-size: 1.2rem;
+    color: #555;
+    margin: 5px 0;
+}
+
+.cont-schedule span {
+    font-weight: 600;
+}
+
+.schedule {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    margin-top: 30px;
+    text-align: left;
+}
+
+.schedule-deets {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    background-color: white;
+    padding: 30px 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    min-height: 300px;
+    text-align: left;
+}
+
+.schedule-deets h3 {
+    font-size: 1.5rem;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+.schedule-deets ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.schedule-deets li {
+    font-size: 1rem;
+    color: #555;
+    margin: 5px 0;
+    padding: 5px 0;
+    border-bottom: 1px solid #eee;
+}
+
+/* registration section */
+.cont-registration {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 50px 20px;
+    gap: 20px;
+}
+
+.cont-registration h2 {
+    font-size: 2.5rem; /* Prominent heading */
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.cont-registration p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.register-btn {
+    background-color: #f1530d;
+    color: white;
+    text-decoration: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.register-btn:hover {
+    background-color: #e0480c;
+    color: #555;
+    cursor: pointer;
+}
+
+/* footer */
+footer {
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 20px 40px;
+    border-top: 2px solid #f1530d;
+}
+
+footer p {
+    padding-top: 20px;
+}
+
+.footer-deets {
+    display: inline-block; /* keeps the content centered within the footer */
+    text-align: left;
+}
+
+.footer-deets span {
+    font-weight: 600;
+}
+
+.footer-deets p {
+    padding-top: 16px;
+}
+
+.follow-links li {
+    padding-left: 30px;
+}
+
+.contact-info {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0 0;
+}
+
+.contact-info li {
+    margin: 5px 0;
+    font-size: 1rem;
+}
+
+.contact-info a {
+    color: #f1530d;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    color: white;
+}
+
+.contact-info img {
+    height: 20px;
+    padding-right: 12px;
+}
+
+/* dummy form AHHHHHHHHHHHHHHHHHHHHHHH */
+.form-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f8f8f8;
+}
+
+.cont-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+}
+
+.cont-form h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.registration-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.form-group label {
+    font-size: 1rem;
+    color: #555;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #f1530d;
+    box-shadow: 0 0 4px rgba(241, 83, 13, 0.3);
+}
+
+.submit-btn {
+    background-color: #f1530d;
+    color: #fff;
+    padding: 15px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+.submit-btn:hover {
+    background-color: #e0480c;
+}
+
+@media (max-width: 768px) {
+   .nav-links {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 70px; /* Adjust dropdown position */
+        right: 0;
+        background-color: #f1530d;
+        width: 100%;
+        max-height: 0; /* initially hidden */
+        overflow: auto; /* allows dropdown links to be clickable */
+        transition: max-height 0.3s ease-in-out;
+        z-index: 1;
+    }
+
+    .nav-links.active {
+        max-height: 300px; /* Makes the dropdown visible */
+        padding-bottom: 20px;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .navbar {
+        padding: 10px;
+        margin: 0;
+    }
+
+    .hero-text h1 {
+        font-size: 3rem;
+        padding-bottom: 12px;
+    }
+
+/* about section */
+    .cont-about {
+        flex-direction: column;
+        justify-content: center;
+        margin: 0;
+        padding: 80px 50px;
+        gap: 30px;
+    }
+
+/* judges section */
+    .judges {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+/* venue section */
+    .cont-venue h2 {
+        font-size: 2rem;
+    }
+
+    .venue {
+        flex-direction: column-reverse;
+        width: 90%;
+        gap: 30px;
+    }
+
+    .venue-deets {
+        text-align: center;
+    }
+
+/* schedule section*/
+    .cont-schedule h2 {
+        font-size: 2rem;
+    }
+
+    .schedule {
+        flex-direction: column;
+        gap: 30px;
+
+    }
+
+/* registration section */
+    .cont-registration h2 {
+        font-size: 2rem;
+    }
+/* footer*/
+    footer {
+      text-align: left;
+    }
+
+}

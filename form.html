@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="img/icon.ico">
+</head>
+<body>
+    <main class="form-body">
+        <section class="cont-form">
+            <h2>Register for Streetlifting Worlds 2025</h2>
+            <form class="registration-form" action="#" method="POST">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="contact">Contact Number</label>
+                    <input type="tel" id="contact" name="contact" placeholder="Enter your contact number" required>
+                </div>
+                <div class="form-group">
+                    <label for="category">Athlete Category</label>
+                    <select id="category" name="category" required>
+                        <option value="" disabled selected>Select your category</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="weight-class">Weight Class</label>
+                    <select id="weight-class" name="weight-class" required>
+                        <option value="" disabled selected>Select your weight class</option>
+                        <option value="under-60kg">Under 60 kg</option>
+                        <option value="60kg-70kg">60 kg - 70 kg</option>
+                        <option value="70kg-80kg">70 kg - 80 kg</option>
+                        <option value="80kg-90kg">80 kg - 90 kg</option>
+                        <option value="above-90kg">Above 90 kg</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Additional Comments</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Enter any additional details"></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Register Now</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
